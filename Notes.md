@@ -56,3 +56,73 @@
         4.  `tm.append(4)`
     11. Tuples
         1.  can contain different data types
+
+2. 07/18/2018
+    1. Flow Control
+        1. logical
+            1. &&
+            2. ||
+            3. !
+        2. relational
+        3. >
+        4. <
+        5. >=
+        6. <=
+        7. !=
+        8. ==
+    2. iterable object / loop
+        1. `let names = ["A","B","C","D"]`
+           `for name in names {`
+           `print("Hello, \(name)!")`
+           `}`
+        2. `while index < 0 {`
+           `print("count is \(index)"`
+           `index += 1`
+           `}`
+        3. `repeat {...}`
+           `while (index <5)`
+    3. class
+        1. one class per file (convention)
+        2. `func descrption() -> String {` // a func that        returns a string
+           `return "First \(firstName) Last \(lastName)"`
+           `}`
+        3. `var newP = Person(first:"H",last:"S")` // must indicate argument label
+        4. static func printHello() {}
+            1. static is class method, not instance needed
+            2. `Person.printHello()`
+            3. `print(newP.description())`
+            4. cannot be overridden
+        5. class func
+            1. can be overridden
+            2. class func createOne (first:String, last:String)->Person{...}
+            3. var np2 = Person.createOne(first:"L", last:"S")
+    4. functions
+        1. keyword func
+            1. static / class optional
+        2. func <funcName> (<argList>) -> <returnType> {code}
+            1. `func example (name:String) {`
+               `print("my name is \(name)")`
+               `}`
+               `example(name:"Bill")`
+        3. argument label
+            1. `func printName(fn fir:String, ln las:String) {`
+               `print("\(las), \(fir)")`
+               `}`
+            2. `printName(fn:"H",ln:"G")`
+                1.  fn is external name, fir is internal name
+            3. `func printName( _ fir:String, _ las:String) {`
+               `print("\(las), \(fir)")`
+               `}`
+            4. `printName("H", "G")`
+                1. _ as a place holder
+            5. `func printName(fn fir:String, ln las:String = "W") {` // give a default value if no value if passed in
+               `print("\(las), \(fir)")`
+               `}`
+            6. `printName(fn:"H", ln:"G")`
+               `func retG (pName:String) -> String {`
+               `let newG = "Hello, " + pName + "!"`
+               `return newG`
+               `}`
+            7. `print(retG(pName:"Ron"))`
+            8. func minMax(...) -> (min:Int, max:Int) {...}
+            
