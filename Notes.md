@@ -125,4 +125,15 @@
                `}`
             7. `print(retG(pName:"Ron"))`
             8. func minMax(...) -> (min:Int, max:Int) {...}
+
+3. 07/19/2018
+    1. XCode
+        1. start a new project
+            1. Single View App
+                1. main.swift AppDelegate.swift
+                2. main story
+                    1. click and drag button
+                    2. Interface Builder
+                        1. connect outlets
+                        2. constraints
             
