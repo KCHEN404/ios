@@ -1,6 +1,8 @@
 //
 //  Armor.swift
 //  ChenKunyu-HW1
+//  EID: kc38294
+//  Course: CS371L
 //
 //  Created by Chen, Kunyu on 7/19/18.
 //  Copyright © 2018 Chen, Kunyu. All rights reserved.
@@ -13,18 +15,20 @@ class Armor {
     let armorClass: Int
     
     init(type: String) {
-        armorType = type
-        if armorType == "plate" {
+        if type == "plate" {
             armorClass = 2
-        } else if armorType == "chain" {
+        } else if type == "chain" {
             armorClass = 5
-        } else if armorType == "leather" {
+        } else if type == "leather" {
             armorClass = 8
-        } else if armorType == "none" {
+        } else if type == "none" {
             armorClass = 10
         } else {
-            armorClass = Int.max
-            print("No such armor")
+            armorType = "none"
+            armorClass = 10
+            print("No such armor") // Armor type invalid
+            return
         }
+        armorType = type
     }
 }

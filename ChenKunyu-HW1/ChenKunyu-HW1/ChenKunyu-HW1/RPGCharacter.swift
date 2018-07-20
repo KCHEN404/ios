@@ -1,6 +1,8 @@
 //
 //  RPGCharacter.swift
 //  ChenKunyu-HW1
+//  EID: kc38294
+//  Course: CS371L
 //
 //  Created by Chen, Kunyu on 7/19/18.
 //  Copyright © 2018 Chen, Kunyu. All rights reserved.
@@ -51,8 +53,7 @@ class RPGCharacter {
     
     func checkForDefeat(character: RPGCharacter) {
         if character.curHealth <= 0 {
-            print("\(characterName) has been defeated!")
+            print("\(character.characterName) has been defeated!")
         }
     }
 }
-

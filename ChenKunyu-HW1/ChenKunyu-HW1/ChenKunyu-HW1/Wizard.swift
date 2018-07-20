@@ -1,6 +1,8 @@
 //
 //  Wizard.swift
 //  ChenKunyu-HW1
+//  EID: kc38294
+//  Course: CS371L
 //
 //  Created by Chen, Kunyu on 7/19/18.
 //  Copyright © 2018 Chen, Kunyu. All rights reserved.
@@ -54,14 +56,15 @@ class Wizard: RPGCharacter {
             return
         }
         if target.curHealth - effect > target.maxHealth {
-            healthPoints = target.maxHealth - target.curHealth
-            target.curHealth = target.maxHealth
+            healthPoints = target.maxHealth - target.curHealth // Actual health points raised by the heal spell
+            target.curHealth = target.maxHealth // A heal spell cannot raise the target's health above its maximum
         } else {
             target.curHealth -= effect
         }
         curSpell -= cost
         if spellName == "Heal" {
             print("\(characterName) heals \(target.characterName) for \(healthPoints) health points")
+            print("\(target.characterName) is now at \(target.curHealth) health")
         } else {
             print("\(characterName) does \(effect) damage to \(target.characterName)")
             print("\(target.characterName) is now down to \(target.curHealth) health")
@@ -70,4 +73,3 @@ class Wizard: RPGCharacter {
         
     }
 }
-

@@ -1,6 +1,8 @@
 //
 //  Fighter.swift
 //  ChenKunyu-HW1
+//  EID: kc38294
+//  Course: CS371L
 //
 //  Created by Chen, Kunyu on 7/19/18.
 //  Copyright © 2018 Chen, Kunyu. All rights reserved.
