@@ -136,4 +136,69 @@
                     2. Interface Builder
                         1. connect outlets
                         2. constraints
-            
+
+4. 07/20/2018
+    1. break point
+        1. click the line number
+    2. framework
+        1. OpenStep
+            1. Foundation
+            2. AppKit
+            3. Cocoa Touch
+            4. Core Data
+    3. Programming Paradigms
+        1. Functional Programming
+            1. done w/ expression, not statement
+            2. avoid state changes and mutable data
+            3. output solely depends on its argument
+            4. ex: lambda, logic programming, Scheme
+        2. Imperative Programming
+            1. change a program state
+            2. ex: FORTRAN, Basic
+        3. Procedural Programming
+            1. routines/functions
+            2. modularizing
+            3. scoping
+                1. global
+                2. local
+            4. communication btwn procedures via parameters
+        4. Structured Programming
+            1. focused on making programs easier to write, debug and understand
+            2. proliferation of subprograms, block structures
+        5. Declarative
+            1. defines computational logic without defining its control flow
+            2. ex: Prolog, SQL
+        6. OOP
+            1. organize programs as objects, data structures with attributes and methods together with their interactions
+        7. Automata-Based Programming
+            1. part of a program is treated as a model of a finite state machine or similar formal automation
+        8. Event-Driven Programming
+            1. control flow is determined by events
+        9. Software Architectural Patterns
+            1.  reusable approaches or solutions to problems in software design that show up frequently
+            2.  Model View Controller
+                1.  architectural patterns for implementing user interfaces
+                2.  event driven
+                3.  three interconnected parts in order to separate internal structures from the way they're presented to the users
+                    1.  Model
+                        1.  consists of objects that encapsulate the data specific to the app
+                        2.  defines logic and computations that manipulate and process that data
+                    2.  View
+                        1.  any object that users can see
+                        2.  to display data from the model and enable editing of that data
+                        3.  view objects know how to draw themselves and can respond to user actions
+                        4.  provide consistency btwn apps
+                        5.  multiple views of the same info is possible
+                    3. Controller
+                        1. intermediary btwn view objects and model objects
+                        2. accept input and converts it to commands fro the model or view
+                        3. can perform setup and coordinating task for an app and manage the life cycles of objects
+                            1. model
+                                1. tells the view to change the presentation when there is change in model
+                                2. tells the controller when there has been a state change, causing the controller to changes the type of commands available
+                            2. View
+                                1. request info from the model that it uses to generate output to users
+                            3. controller
+                                1. interprets user actions made in views and communicate w/ the model to update the model
+                                2. when model changes, reflect changes to the view's presentaton
+                        4. users never directly interact w/ the users
