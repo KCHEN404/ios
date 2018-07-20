@@ -131,7 +131,7 @@
         1. start a new project
             1. Single View App
                 1. main.swift AppDelegate.swift
-                2. main story
+                2. main story and View control
                     1. click and drag button
                     2. Interface Builder
                         1. connect outlets
