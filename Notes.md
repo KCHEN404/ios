@@ -200,5 +200,53 @@
                                 1. request info from the model that it uses to generate output to users
                             3. controller
                                 1. interprets user actions made in views and communicate w/ the model to update the model
-                                2. when model changes, reflect changes to the view's presentaton
+                                2. when model changes, reflect changes to the view's presentation
                         4. users never directly interact w/ the users
+
+5. 07/23/2018
+    1. View Controller
+        1. coordinate communication btwn data and view components
+        2. derives from UIViewController class
+        3. every app has at least one
+        4. Content VC vs. Container VC
+            1. Content VC
+                1. present content on the screen using a view or a group views organization into a view hierarchy
+            2. Container VC
+                1. contain content owned by other VCs that are explicitly assigned to the container VC as its children
+                2. establishes a view controller hierarchy
+        5. Table View Controller
+            1. in tabular form
+            2. table cell
+            3. can display in distinct grouping
+            4. can allow selection of one or more entries
+            5. opt: disclose indicator, indexed list of items
+        6. Navigation View Controller
+            1. navigate btwn VCs
+        7. Page View Controller
+            1. single view to display content
+            2. dots or swipe to turn page
+            3. container controller
+                1. each page managed by own VC
+            4. tab view controller
+                1. a row of tabs at the bottom of the screen
+                2. container controller
+    2. Protocol
+        1. declaration of a group of related properties, initializers, and methods that provide a desired task or level of functionality
+        2. kind of like interface
+        3. adopt/confirm protocol
+        4. Protocol <ProtocolName> {...}
+        5. class ClassName: Protocol1, Protocol2 {...}
+        6. class ClassName: MySuperClass, Protocol1 {...} // super class must listed before protocol
+        7. some parts are required some parts are optional
+        8. CustomStringConvertible
+            1. description()
+                1. allow to print object
+                2. ex: `var description: String {`
+                       `return width`
+                       `}`
+        9. fake multiple inheritance
+    3.  Delegate
+        1.  one objects acts on behalf of or in coordination with another object
+        2.  pointer to some objects that has implemented the protocol's methods
+        3.  delegating object keeps a reference to another object (the delegate) and at the appropriate time, sends a message to it
+        4.  ex: child refer purchase to mother

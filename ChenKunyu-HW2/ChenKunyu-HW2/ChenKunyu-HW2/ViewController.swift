@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
-        if (idText.text?.isEmpty)! || (passwordText.text?.isEmpty)! {
+        if idText.text == "" || passwordText.text == "" {
             loginStatus.text = "Invalid login"
         } else {
             loginStatus.text = "\(idText.text ?? "user") logged in"
