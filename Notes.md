@@ -252,4 +252,6 @@
         4.  ex: child refer purchase to mother
     4. Segue
         1. named transition btwn one part of UI to another (move from one VC to another)
-        2. 
+
+6. 07/24/2018
+    1. 
