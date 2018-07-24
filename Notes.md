@@ -250,3 +250,6 @@
         2.  pointer to some objects that has implemented the protocol's methods
         3.  delegating object keeps a reference to another object (the delegate) and at the appropriate time, sends a message to it
         4.  ex: child refer purchase to mother
+    4. Segue
+        1. named transition btwn one part of UI to another (move from one VC to another)
+        2. 
