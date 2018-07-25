@@ -253,5 +253,16 @@
     4. Segue
         1. named transition btwn one part of UI to another (move from one VC to another)
 
-6. 07/24/2018
-    1. 
+6. 07/25/2018
+    1. Alert views
+        1. UIAlertController
+            1. style
+                1. trust & not trust
+                2. action sheet
+        2. UIAlertAction
+            1. title
+            2. style
+                1. default
+                2. cancel
+                3. destructive
+            3. handler
