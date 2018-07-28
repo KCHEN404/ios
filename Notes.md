@@ -266,3 +266,70 @@
                 2. cancel
                 3. destructive
             3. handler
+
+7. 07/26/2018
+    1. optional variable (?)
+        1. "a label on the box"
+        2. never answer the question vs. answer was empty
+        3. wrapper
+            1. optional(value)
+            2. forced unwrap (!)
+            3. `if x != nil {`
+                  `print(x!)`
+               `}`
+    2. optional binding
+        1. `if let t = tens, let u = ones {`
+           `let tenTimes = 10*t + u`
+           `}`
+        2. `let result = x != nil ? x! : 999`
+        3. `let result = x ?? 999` // nil coalescing -> if x has value, use it, otherwise use 999
+    3. implicitly unwrapped optionals
+    4. take function as argument
+        1. `func myCompare(...) {...}`
+           `print(myArray.sorted(by:myCompare))`
+        2. closure
+            1. "in-line code" or "unnamed function definition"
+            2. `print(myArray.sorted(by: {(func arguments)->Bool in {func body}}))`
+            3. `print(myArray.sorted(by: {(func arguments) in {func body}}))` // if there is only one line of code in func body
+            4. `print(myArray.sorted(by: {$0[0] > $1[0]}))` // $0 -> arg 0, $1 -> arg 1
+    5. func args
+        1. `func listSum(values:Int...)`
+        2. `print(listSum(values: 1,2,3,4,5,6,7))` // any number of int
+
+8. 07/27/2018
+    1. named vs compound
+        1. named
+            1. primitives
+            2. user class
+            3. protocols
+            4. structures
+            5. arrays
+        2. compound
+            1. tuples
+            2. functions
+    2. scoping
+        1. module
+            1. single unit of code distribution
+                1. ex: hw1
+            2. framework of app that is built and shipped as a single unit and can be imported by another module using import keyword
+        2. source file
+            1. single swift source code file within module
+            2. can contain definitions for multiple types, functions
+    3. access levels
+        1. public
+        2. internal
+            1. used within any source file from their defining module
+        3. private
+            1. only inits own defining source file
+    4. segmented controls
+        1. display a list of options that a user can choose from
+        2. look like and behave like a radio button
+        3. remain "pressed" even after the user selects the control
+        4. do not have to be the same type, text and images can be mixed
+    5. popover controller
+        1. special controller class that is used to manage the presentation of content in a popover
+        2. present information temporary, similar to alert
+        3. display over current content, with current content grayed out
+        4. remain visible until user taps outside of it, or select something in the popover
+        5. UIPopoverPresentationController
+        6. use a nav controller when on a small device
