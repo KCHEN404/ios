@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I9I-Fp-HDs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="segment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OMT-xE-dV7">
+                                <rect key="frame" x="37.5" y="319.5" width="300" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EBi-N5-lOK"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="87A-hr-JOj"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First is selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pei-mg-Dcs">
+                                <rect key="frame" x="127.5" y="198.5" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baj-Lq-VPQ">
+                                <rect key="frame" x="163" y="448" width="49" height="29"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sDf-dQ-xmQ"/>
+                                    <segue destination="Ihp-GK-Hro" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="baj-Lq-VPQ" id="7yH-Oy-q96">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="baj-Lq-VPQ" firstAttribute="top" secondItem="OMT-xE-dV7" secondAttribute="bottom" constant="100" id="3or-VD-b4g"/>
+                            <constraint firstItem="OMT-xE-dV7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4aG-ND-vLF"/>
+                            <constraint firstItem="baj-Lq-VPQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ig-lq-JvW"/>
+                            <constraint firstItem="OMT-xE-dV7" firstAttribute="top" secondItem="pei-mg-Dcs" secondAttribute="bottom" constant="100" id="TPE-Bk-kdu"/>
+                            <constraint firstItem="pei-mg-Dcs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZzT-ed-7Z4"/>
+                            <constraint firstItem="OMT-xE-dV7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKE-un-pZW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mvG-1w-aKF"/>
+                    <connections>
+                        <outlet property="segCtrl" destination="OMT-xE-dV7" id="SVJ-mr-KQi"/>
+                        <outlet property="textLabel" destination="pei-mg-Dcs" id="Fm0-YF-pmu"/>
+                        <segue destination="osd-BP-lWC" kind="show" identifier="VC1" id="3aH-p5-qoI"/>
+                        <segue destination="QTH-jM-lSC" kind="show" identifier="VC2" id="ZTJ-kN-2OR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="118.29085457271366"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="Qum-cg-UBL">
+            <objects>
+                <viewController id="osd-BP-lWC" customClass="FirstViewController" customModule="segment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEe-iN-8gd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAW-BO-6mD">
+                                <rect key="frame" x="157" y="323" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LAW-BO-6mD" firstAttribute="centerY" secondItem="lEe-iN-8gd" secondAttribute="centerY" id="SwH-PV-je1"/>
+                            <constraint firstItem="LAW-BO-6mD" firstAttribute="centerX" secondItem="lEe-iN-8gd" secondAttribute="centerX" id="V6V-6n-HnS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X3A-bN-khT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQm-iO-awO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="-404.34782608695656"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hUa-SN-EpH">
+            <objects>
+                <viewController id="QTH-jM-lSC" customClass="SecondViewController" customModule="segment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lNW-mn-ylG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-Z5-n8I">
+                                <rect key="frame" x="145" y="323" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xvU-Z5-n8I" firstAttribute="centerY" secondItem="lNW-mn-ylG" secondAttribute="centerY" id="cGA-42-bAR"/>
+                            <constraint firstItem="xvU-Z5-n8I" firstAttribute="centerX" secondItem="lNW-mn-ylG" secondAttribute="centerX" id="yeD-Oe-hpw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8a-tK-h7O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KN6-HQ-BvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aRJ-VF-aFi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I9I-Fp-HDs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Yc-gA-ecV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w2x-c0-Rm4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpm-zT-YXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="Dd9-ER-7RQ">
+            <objects>
+                <viewController id="Ihp-GK-Hro" customClass="PopoverViewController" customModule="segment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Jwf-Om-h8B">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="myZ-bq-dmD">
+                                <rect key="frame" x="20" y="20" width="160" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Uk-he6">
+                                <rect key="frame" x="73" y="35" width="54" height="33"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="onDismissClicked:" destination="Ihp-GK-Hro" eventType="touchUpInside" id="sLR-Qk-Pz8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p1i-Uk-he6" firstAttribute="centerX" secondItem="Jwf-Om-h8B" secondAttribute="centerX" id="26c-tP-G4O"/>
+                            <constraint firstItem="myZ-bq-dmD" firstAttribute="top" secondItem="K0v-jD-Bl8" secondAttribute="top" constant="20" id="WtE-Sq-Pg9"/>
+                            <constraint firstItem="K0v-jD-Bl8" firstAttribute="bottom" secondItem="p1i-Uk-he6" secondAttribute="bottom" constant="20" id="YPa-2n-nwE"/>
+                            <constraint firstAttribute="trailing" secondItem="myZ-bq-dmD" secondAttribute="trailing" constant="20" id="bdX-7z-lww"/>
+                            <constraint firstAttribute="bottom" secondItem="myZ-bq-dmD" secondAttribute="bottom" constant="300" id="hV6-6t-H55"/>
+                            <constraint firstItem="myZ-bq-dmD" firstAttribute="leading" secondItem="K0v-jD-Bl8" secondAttribute="leading" constant="20" id="roH-U6-uev"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K0v-jD-Bl8"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="100"/>
+                    <size key="freeformSize" width="200" height="100"/>
+                    <connections>
+                        <outlet property="textView" destination="myZ-bq-dmD" id="swv-hn-RMr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHY-xt-RLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129.5999999999999" y="594.60269865067471"/>
+        </scene>
+    </scenes>
+</document>
