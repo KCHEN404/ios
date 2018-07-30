@@ -333,3 +333,24 @@
         4. remain visible until user taps outside of it, or select something in the popover
         5. UIPopoverPresentationController
         6. use a nav controller when on a small device
+
+9. 07/30/2018
+    1.  CocoaPods
+        1.  a dependency manager
+        2.  `sudo gem install cocoapods`
+        3.  `pod setup --verbose`
+    2. Firebase
+        1. BaaS
+            1. backend as a service
+            2. real time database
+            3. access through web socket
+            4. faster than http
+            5. file storage
+            6. authentication
+            7. hosting
+            8. analytics
+            9. cloud messaging
+            10. other google products
+    3. weak vs strong reference
+    4. guard else
+        1. 
