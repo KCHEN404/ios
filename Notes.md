@@ -353,4 +353,25 @@
             10. other google products
     3. weak vs strong reference
     4. guard else
-        1. 
+
+10. 07/31/2018
+    1.  user defaults
+        1. key/value pair with persistence
+        2. for small amounts of data < 100KB
+        3.  NSUserDefaults
+          `let defaults = NSUserDefaults.standard`
+          `defaults.set(<value>, forKey: <keyname>)`
+        4. bool, int, float, double user defaults do not return optional
+    2. core data
+        1. large amount of data > 100KB
+        2. Managed Object Model
+        3. Managed Object Context
+            1. interact with context, not directly w/ database itself
+        4. Core data architecture
+            1. entity (treated like a class)
+            2. attributes
+                1. a piece of info attached to a particular entity
+            3. relationship
+                1. connections btwn entities
+    3. lazy
+        1. do not create until needed (create when need to use it)
