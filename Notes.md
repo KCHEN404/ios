@@ -375,3 +375,8 @@
                 1. connections btwn entities
     3. lazy
         1. do not create until needed (create when need to use it)
+
+11. 08/01/2018
+    1.  stack view
+    2.  frame and bounds
+        1.  
