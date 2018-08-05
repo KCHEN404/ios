@@ -379,4 +379,70 @@
 11. 08/01/2018
     1.  stack view
     2.  frame and bounds
-        1.  
+
+12.  Multithreading
+    1. task
+        1. can see variables and values from its enclosing scope(calling function)
+    2. serial vs concurrency
+    3. concurrency vs parallelism
+    4. synchronous vs asynchronous
+        1. synchronous return until task finishes
+        2. asynchronous return immediately, w/out waiting the task to be completed
+        3. asynchronous function call does not block current thread of execution from proceeding
+    5. critical section
+        1. must not be executed concurrently
+    6. race condition
+    7. deadlock
+    8. thread safe
+    9. GCD
+        1.  import Foundation
+        2.  serial queues
+        3.  concurrent queues
+        4.  main dispatch queue
+            1. serial
+            2. only execute one task at a time
+            3. the UI can be blocked when you run a heavy task in the main queue
+        5.  global dispatch queue
+        6.  Quality of Service
+            1.  priority of queues
+                1. userInteractive
+                    1. need to be done immediately for good experience
+                    2. small amount of work with low latency
+                2. userInitiated
+                    1. For tasks that are initiated from the UI and can be performed asynchronously
+                3. default
+                4. utility
+                    1. long-running tasks, typically with a user-visible progress indicator
+                5. background
+                6. unspecified
+        7. create a global queue
+            1. `let queue = DispatchQueue.global()`
+        8. Create a custom queue named <name>:
+            1. `let queue = DispatchQueue(label: <name>, qos: .userInitiated)`
+        9. method to use to initiate tasks
+            1.  `queueName.sync {<task>}`
+            2.  `queueName.async {<task>}`
+
+13. 08/03/2018
+    1.  Notification
+        1. Basic
+            1. Key Value Observing
+                1. work w/ class inherits from NSObject
+                2. observer for property you want to monitor
+                3. have `@objc dynamic` in front of the property bc KVO is implemented in Objective C
+                4. observer
+                    1. keypath
+                        1. `\class.property`
+                    2. options
+                        1. .new
+                        2. .old
+                        3. initial
+                        4. prior
+                    3. closure
+                    4. `class Person: NSObject {@objc dynamic var name = "TS"}`
+                    5. `let taylor = Person()`
+                    6. `taylor.observe(\Person.name, options: .new) {person, change in print ("My name is \(person.name)")}`
+        2. Remote
+            1. sent by APNS
+        3. Scheduled local
+        4. User notification
