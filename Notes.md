@@ -445,4 +445,4 @@
         2. Remote
             1. sent by APNS
         3. Scheduled local
-        4. User notification
+        4. User notification 
