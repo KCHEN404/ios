@@ -446,3 +446,12 @@
             1. sent by APNS
         3. Scheduled local
         4. User notification 
+14. 08/06/2018
+    1.  animation
+        1.  frame
+        2.  bounds
+        3.  center
+        4. transform
+        5. alpha
+        6. background color
+        7. content stretch
