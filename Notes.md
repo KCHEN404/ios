@@ -446,7 +446,8 @@
             1. sent by APNS
         3. Scheduled local
         4. User notification 
-14. 08/06/2018
+
+14.  08/06/2018
     1.  animation
         1.  frame
         2.  bounds
@@ -455,3 +456,41 @@
         5. alpha
         6. background color
         7. content stretch
+
+15. 08/07/2018
+    1.  Networking w/ ios
+        1.  NSURLConnection
+            1.  don't use this, archaic
+        2.  NSURLSession
+            1.  recommended
+            2.  AFNetworking
+                1.  stable & popular
+                2.  called AlamoFire in Swift
+            3. thread safe
+            4. policies
+                1. shared
+                    1. used for basic requests
+                2. default
+                    1. receive data incrementally
+                1. ephemeral
+                    1. does not write caches, cookies or credentials to the persistent store
+                2. background
+                    1. allows upload / download in the background
+            5. NSURLSessionTask
+
+16. 08/08/2018
+    1.  UIView layout margin
+    2.  Core Location
+        1.  import CoreLocation
+        2.  create CLLocationManager object
+        3.  ask user permission to use Location Services
+        4. MapKit
+            1. Standard
+            2. Satellite
+            3. Hybrid
+            4. import MapKit
+            5. include MKMapView in view controller
+    3. Core Audio
+        1. sample rates
+        2. bit rates
+        3. 
